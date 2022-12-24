@@ -1,0 +1,11 @@
+main,
+aside,
+nav,
+footer,
+header,
+section,
+figure,
+figcaption,
+hgroup {
+  display: block;
+}
