@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import 'reset';
+@import 'ie9';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'core';
+@import 'animations';
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/advantages';
+@import 'blocks/history';
+@import 'blocks/services';
+@import 'blocks/recent';
+@import 'blocks/case-study';
+@import 'blocks/counts';
+@import 'blocks/price';
+@import 'blocks/team';
+@import 'blocks/integration';
+@import 'blocks/blog';
+@import 'blocks/contacts';
+@import 'blocks/form';
+@import 'blocks/free';
+@import 'blocks/footer';
+@import 'blocks/arrow-up';

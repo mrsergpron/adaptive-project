@@ -1,0 +1,124 @@
+.advantages {
+  margin-top: 200px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+    border-bottom: 1px solid $advantages-line;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    max-width: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      .advantages__icon {
+        transform: rotate(45deg);
+        border-color: $red;
+      }
+
+      .advantages__svg {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      .advantages__title {
+        color: $red;
+      }
+    }
+  }
+
+  &__icon {
+    margin-top: 20px;
+    border: 1px solid $advantages-icon-line;
+    width: 73px;
+    height: 73px;
+    position: relative;
+    transition: 0.5s all;
+  }
+
+  &__svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    fill: $red;
+    transition-duration: 500ms;
+    transition-property: transform;
+
+    &--img1 {
+      width: 32px;
+      height: 12px;
+    }
+
+    &--img2 {
+      width: 27px;
+      height: 23px;
+    }
+
+    &--img3 {
+      width: 30px;
+      height: 25px;
+    }
+
+    &--img4 {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1.35px;
+    color: #6a6a6a;
+    transition: 0.5s all;
+
+    &::after {
+      content: "";
+      width: 41px;
+      height: 2px;
+      background-color: #ccc;
+      display: block;
+      margin: 20px auto 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #000;
+  }
+}
+
+@media (max-width: 810px) {
+  .advantages {
+    &__item {
+      max-width: 40%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .advantages {
+    &__item {
+      max-width: 95%;
+    }
+  }
+}

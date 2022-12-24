@@ -1,0 +1,146 @@
+.form {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  width: 49%;
+  height: 500px;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+
+  legend {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__name {
+    margin-bottom: 20px;
+    width: 90%;
+    outline: none;
+    font-size: 18px;
+    color: $services-text;
+    color: $red;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  &__email {
+    margin-bottom: 20px;
+    width: 90%;
+    outline: none;
+    font-size: 18px;
+    color: $services-text;
+    color: $red;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+  &__subject {
+    margin-bottom: 20px;
+    width: 90%;
+    font-size: 18px;
+    color: $services-text;
+    color: $red;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  &__message {
+    margin-bottom: 40px;
+    width: 90%;
+    font-size: 18px;
+    color: $services-text;
+    color: $red;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+  }
+  &__submit {
+    margin-bottom: 20px;
+    width: 100px;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+  }
+
+  &__input1 {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    color: $services-text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:focus {
+      background-color: #f6f6f6;
+    }
+
+    &:valid {
+      border-bottom: none;
+    }
+  }
+
+  &__input2 {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    color: $services-text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:focus {
+      background-color: #f6f6f6;
+    }
+
+    &:valid {
+      border-bottom: none;
+    }
+  }
+  &__input3 {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    color: $services-text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:focus {
+      background-color: #f6f6f6;
+    }
+
+    &:valid {
+      border-bottom: none;
+    }
+  }
+
+  textarea {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    color: $services-text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__btn {
+    @include btn($two-button: false);
+  }
+}
+
+@media (max-width: 576px) {
+  .form {
+    width: 99%;
+  }
+}

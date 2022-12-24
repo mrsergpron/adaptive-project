@@ -1,0 +1,32 @@
+.arrow-up {
+	width: 53px;
+	height: 53px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	background-color: $red;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 10;
+
+	a {
+		display: block;
+		width: 100px;
+		height: 100px;
+	}
+
+	img,
+	svg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.arrow-up__img {
+		width: 12px;
+		height: 12px;
+		fill: $white;
+	}
+}

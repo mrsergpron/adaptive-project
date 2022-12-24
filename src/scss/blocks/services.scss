@@ -1,0 +1,161 @@
+.services {
+  margin-top: 140px;
+  background-color: $services-bg;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 46%;
+    height: 100%;
+    display: block;
+    background: url('../img/services-bg.jpg') no-repeat top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    width: 53%;
+    background-color: $services-bg;
+    padding: 10px;
+    padding-top: 140px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: $menu-color;
+    display: block;
+    border-right: 5px solid red;
+    padding-right: 20px;
+    margin-right: 12%;
+    margin-bottom: 70px;
+    text-align: right;
+  }
+
+  &__elements {
+    position: relative;
+    .element {
+      margin-bottom: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      &__left {
+        margin-right: 12%;
+        text-align: right;
+        width: 90%;
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 29px;
+        color: $red;
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 14px;
+        line-height: 29px;
+        letter-spacing: 0.9px;
+        color: $services-text;
+      }
+
+      &__right {
+        width: 70px;
+        height: 70px;
+        display: block;
+        border-radius: 50%;
+        background-color: $menu-color;
+        border: 5px solid #ccc;
+        position: relative;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 20%;
+        right: -10.5%;
+        z-index: 5;
+      }
+
+      &__svg {
+        fill: $red;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .services {
+    &__elements {
+      .element {
+        &__right {
+          top: 40%;
+          right: -6.5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .services {
+    margin-top: 140px;
+    &::after {
+      content: '';
+      display: none;
+    }
+
+    &__left {
+      width: 90%;
+      padding-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 551px) {
+  .services {
+    margin-top: 140px;
+    &__left {
+      padding-top: 60px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-right: 0;
+    }
+    &__elements {
+      .element {
+        &__right {
+          display: none;
+        }
+        &__left {
+          margin-right: 0;
+          text-align: right;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 347px) {
+  .services {
+    margin-top: 240px;
+  }
+}

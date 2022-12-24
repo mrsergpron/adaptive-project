@@ -1,0 +1,57 @@
+.integration {
+	padding-top: 140px;
+	padding-bottom: 110px;
+	background-color: $menu-color;
+	border-bottom: 3px solid $advantages-line;
+
+	&__title {
+		margin-bottom: 30px;
+		text-align: center;
+		font-family: 'Source Sans Pro';
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 36px;
+		letter-spacing: 3.6px;
+		text-transform: uppercase;
+		color: $case-study-title;
+	}
+	&__text {
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-family: 'Source Sans Pro';
+		font-size: 16px;
+		line-height: 29px;
+		color: $services-text;
+	}
+	&__list {
+		margin-top: 60px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		margin-bottom: 30px;
+		background-color: $white;
+		padding: 10px;
+		box-shadow: 0 1px 3px rgba(31, 31, 31, 0.09);
+	}
+}
+
+@media (max-width: 768px) {
+	.integration {
+		padding-top: 80px;
+		padding-bottom: 30px;
+	}
+}
+@media (max-width: 469px) {
+	.integration {
+		&__item {
+			width: 90%;
+		}
+	}
+}

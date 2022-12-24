@@ -1,0 +1,117 @@
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@mixin btn(
+  $bg: $red,
+  $fs: 14px,
+  $fw: 700,
+  $lh: 16px,
+  $ls: 0.14px,
+  $br: 3px,
+  $w: 225px,
+  $clr: $white,
+  $two-button: true
+) {
+  width: $w;
+  color: $clr;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  background-color: $bg;
+  border-radius: $br;
+  border: 2px solid $bg;
+  padding: 18px 0;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 25px 0;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  transition-duration: 500ms;
+  transition-property: background-color, border-color;
+  @content;
+
+  &:hover {
+    background-color: darken($bg, 10%);
+    border-color: darken($bg, 10%);
+  }
+
+  @if $two-button == true {
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      background-color: transparent;
+      border-color: $white;
+    }
+
+    &:hover {
+      &:last-child {
+        background-color: $bg;
+        border-color: $bg;
+      }
+    }
+  }
+}
+
+@mixin divider($color-line: $color-line-divider) {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: 7px;
+  height: 7px;
+
+  p {
+    text-align: center;
+
+    &::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background-color: $red;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $color-line;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-1px);
+  }
+
+  &::before {
+    left: -90px;
+  }
+
+  &::after {
+    right: -90px;
+  }
+}

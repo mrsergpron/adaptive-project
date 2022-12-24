@@ -1,0 +1,161 @@
+.contacts {
+  background-color: $menu-color;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 3.6px;
+    color: $case-study-title;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__text {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 29px;
+    color: $services-text;
+    text-align: center;
+  }
+  &__block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  &__address {
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    width: 49%;
+    height: 500px;
+    padding: 60px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  &__street {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  h3 {
+    color: $red;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
+    margin-bottom: 20px;
+
+    p {
+      color: $services-text;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Source Sans Pro", sans-serif;
+      letter-spacing: 0.5px;
+    }
+  }
+  &__call {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    h3 {
+      color: $red;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 24px;
+      font-family: "Source Sans Pro", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $services-text;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Source Sans Pro", sans-serif;
+      letter-spacing: 0.5px;
+    }
+  }
+  &__email {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    h3 {
+      color: $red;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 24px;
+      font-family: "Source Sans Pro", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $services-text;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Source Sans Pro", sans-serif;
+      letter-spacing: 0.5px;
+    }
+  }
+  &__form {
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    width: 49%;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .contacts {
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__address {
+      width: 99%;
+      height: 350px;
+    }
+
+    &__street {
+      top: 10%;
+      left: 10%;
+    }
+
+    &__call {
+      top: 40%;
+      left: 10%;
+    }
+    &__email {
+      top: 75%;
+      left: 10%;
+    }
+
+    &__form {
+      width: 99%;
+    }
+  }
+}

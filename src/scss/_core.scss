@@ -1,0 +1,20 @@
+/**
+ * Основные стили
+ **/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+
+.wrap {
+  @include min-max(320px, 1200px, 15px);
+}
+
+p {
+  color: $black;
+}

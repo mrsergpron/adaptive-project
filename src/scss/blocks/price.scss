@@ -1,0 +1,154 @@
+.price {
+	background-color: $white;
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	&__title {
+		text-align: center;
+		font-size: 36px;
+		line-height: 40px;
+		letter-spacing: 3.6px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $case-study-title;
+	}
+
+	&__text {
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 29px;
+		color: $services-text;
+	}
+	&__cards {
+		margin-top: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__card {
+		width: 33%;
+		margin-right: 20px;
+	}
+	&__card--last {
+		margin-right: 0px;
+	}
+	&__top {
+		height: 208px;
+		background-color: $services-text;
+		opacity: 0.6;
+		padding-top: 45px;
+	}
+	&__top--red {
+		height: 208px;
+		background-color: red;
+		opacity: 0.6;
+		padding-top: 45px;
+	}
+	&__name {
+		font-size: 24px;
+		line-height: 25px;
+		letter-spacing: 1.8px;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__bottom {
+		background-color: $case-study-bg;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__tarif {
+		width: 174px;
+		height: 174px;
+		border-radius: 50%;
+		background-color: $white;
+		border: 10px solid rgba(176, 176, 177, 0.3);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: -112px;
+		z-index: 5;
+	}
+	&__tarif--red {
+		border: 10px solid rgba(231, 76, 60, 0.4);
+	}
+
+	&__number {
+		font-size: 40px;
+		color: $services-text;
+
+		span {
+			display: block;
+			font-size: 12px;
+			font-weight: 600;
+		}
+	}
+
+	&__number--red {
+		color: $red;
+		font-weight: 800;
+
+		span {
+			color: $services-text;
+			margin-top: 10px;
+		}
+	}
+
+	&__number--business {
+		color: $services-text;
+		font-weight: bold;
+
+		span {
+			color: $services-text;
+			margin-top: 10px;
+		}
+	}
+
+	&__list {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	&__element {
+		margin-bottom: 30px;
+		font-size: 14px;
+		color: $services-text;
+		font-weight: 600;
+	}
+
+	&__btn {
+		@include btn($bg: $services-text, $two-button: false);
+		margin-bottom: 50px;
+	}
+	&__btn--red {
+		@include btn($two-button: false);
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.price {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		&__cards {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__card {
+			width: 98%;
+			margin-right: 0;
+			margin-top: 20px;
+		}
+	}
+}
